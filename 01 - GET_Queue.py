@@ -3,9 +3,9 @@ import random
 from azure.identity import ClientSecretCredential
 from azure.storage.queue import QueueClient
 
-active_directory_application_id = "ffaec6b2-d955-49e0-9724-65a343281d7c"
-active_directory_application_secret = "loP8Q~BzxZwU0Tscc5bSGCvxxHYaIPFddD_QabQm"
-active_directory_tenant_id = "9e87f26e-cb05-4d5b-b441-b7e4e9da15a6"
+active_directory_application_id = "xxxx-d955-49e0-9724-xxx"
+active_directory_application_secret = "loP8Q~BzxZwU0TsccXXaIPFddD_QaXX"
+active_directory_tenant_id = "ZZ7f26e-cb2305-4444b-741-b7e4eXXXX"
     
 token_credential = ClientSecretCredential(
     active_directory_tenant_id,
@@ -15,7 +15,7 @@ token_credential = ClientSecretCredential(
     
 queue = QueueClient.from_queue_url(
 
-    queue_url="https://storage001teste.queue.core.windows.net/in-message",
+    queue_url="https://STORAGENAME.queue.core.windows.net/in-message",
     credential=token_credential
 )
 
